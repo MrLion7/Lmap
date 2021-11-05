@@ -4,7 +4,7 @@ A tool combined with the advantages of masscan and nmap
 
 一个简单的Nmap和Masscan联动脚本
 
-前置需求：Linux系统,python3.8+,已安装masscan和nmap，引用库：rich和prettytable
+前置需求：Linux系统,python3.8+,已安装masscan和nmap，引用库：rich,prettytable和lxml
 
 代码思路：将ip和端口分为多组，通过异步实现多个masscan并发扫描，利用生产者-消费者模型，一旦masscan扫描到存活端口，就会联动nmap扫描端口服务。
 
