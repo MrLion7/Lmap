@@ -11,3 +11,4 @@ A tool combined with the advantages of masscan and nmap
 config.ini是配置文件，默认Masscan并发数为3，单个masscan速率为1000，ip每3个一组，端口每11000一组，Nmap并发限制量为10。
 
 不是专业开发，代码质量不高，如有bug欢迎反馈。
+![image](https://user-images.githubusercontent.com/47624672/140467891-3ee3b813-3ab8-47c6-a3ae-4b9d3d2515fe.png)
