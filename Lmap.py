@@ -18,7 +18,7 @@ def banner():
 
 def create_ini():
     config = configparser.ConfigParser()
-    config['Masscan'] = {'rate': '1000', 'ConcurrentLimit': '3', 'PortGap': '11000', 'IpGap': '3'}
+    config['Masscan'] = {'rate': '800', 'ConcurrentLimit': '3', 'PortGap': '11000', 'IpGap': '3'}
     config['Nmap'] = {'ConcurrentLimit': '10'}
     configfile = (Path(sys.argv[0]).parent / 'config.ini')
     config.write(configfile.open('w+', encoding='utf-8'))
@@ -64,7 +64,7 @@ async def nmap(queue):
         ip = data['ip']
         port = data['port']
         xml_file = f'temp/{ip}:{port}.xml'
-        cmd = f'nmap -sV -Pn -n -v -T4 {ip} -p {port} -oX {xml_file}'
+        cmd = f'nmap -sV -Pn -n -v  {ip} -p {port} -oX {xml_file}'
         result = {'ip': str(ip), 'port': str(port), 'service': 'unknown', 'product': 'unknown'}
         nmap_task = progress.add_task(f'[cyan]nmap service on {ip}:{port}')
         try:
@@ -145,6 +145,9 @@ if __name__ == '__main__':
     configfile = Path(sys.argv[0]).parent / 'config.ini'
     if (configfile.exists() == False):
         create_ini()
+    temp_file = Path(sys.argv[0]).parent / 'temp'
+    if (temp_file.exists() == False):
+        temp_file.mkdir()
     config = configparser.ConfigParser()
     config.read_file(configfile.open('r', encoding='utf-8'))
     masscan_rate = config['Masscan']['rate']
