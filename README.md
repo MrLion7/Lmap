@@ -1,11 +1,11 @@
 # Lmap
-A tool combined with the advantages of masscan and nmap
+A tool combined with the advantages of masscan and nmap  
 
-V2.0 更新：
-1.可自定义路径，windows可用
-2.默认开启scan-title模式，可扫描title文件，使用httpx库和asyncio，默认扫描title并发量为100。
-3.默认nmap扫描模式为sS,忽略具体版本扫描加快速度，如有需要请设置-sv True。
-4.各细节优化
+V2.0 更新：  
+1.可自定义路径，windows可用。  
+2.默认开启scan-title模式，可扫描存活端口title，默认扫描并发量为100。  
+3.默认nmap扫描模式为sS,忽略具体版本扫描加快速度，如有需要请设置-sv True。  
+4.各细节优化。  
 
 
 一个简单的Nmap和Masscan联动脚本
