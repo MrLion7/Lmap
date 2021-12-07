@@ -6,7 +6,9 @@ V2.0 更新：
 2.默认开启scan-title模式，可扫描存活端口title，默认扫描并发量为100。  
 3.默认nmap扫描模式为sS,忽略具体版本扫描加快速度，如有需要请设置-sv True。  
 4.各细节优化。  
+![image](https://user-images.githubusercontent.com/47624672/144980779-107023c0-889e-4494-a969-e19fc4a0b6d1.png)
 
+![image](https://user-images.githubusercontent.com/47624672/144980772-38bcb2e0-0952-4542-9e31-7134272c6c32.png)
 
 一个简单的Nmap和Masscan联动脚本
 
