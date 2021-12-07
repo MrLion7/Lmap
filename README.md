@@ -7,8 +7,9 @@ V2.0 更新：
 3.默认nmap扫描模式为sS,忽略具体版本扫描加快速度，如有需要请设置-sv True。  
 4.支持排除waf，默认一个ip如果连续开放50个端口则判断有waf，会丢弃结果，可通过更改config.ini的waf-threshold参数改变阈值。  
 5.各细节优化。  
-![image](https://user-images.githubusercontent.com/47624672/144980779-107023c0-889e-4494-a969-e19fc4a0b6d1.png)
 
+![image](https://user-images.githubusercontent.com/47624672/144983177-faba1d48-e7c8-456c-8620-e7d5ead59375.png)
+![image](https://user-images.githubusercontent.com/47624672/144980779-107023c0-889e-4494-a969-e19fc4a0b6d1.png)
 ![image](https://user-images.githubusercontent.com/47624672/144980772-38bcb2e0-0952-4542-9e31-7134272c6c32.png)
 
 一个简单的Nmap和Masscan联动脚本
