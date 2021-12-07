@@ -250,21 +250,16 @@ async def main():
                                                 waf_threshold=waf_threshold,httpx_queue=None)))
     # 等待各队列结束
     await asyncio.gather(*masscan_tasklist)
-    print('success1')
     await nmap_queue.join()
-    print('success2')
     if (scan_title):
         await httpx_queue.join()
-    print('success3')
     # 销毁nmap消费者
     for nmap_task in nmap_tasklist:
         nmap_task.cancel()
-    print('success4')
     # 销毁httpx消费者
     if (scan_title):
         for httpx_task in httpx_tasklist:
             httpx_task.cancel()
-    print('success5')
     progress_bar.update(masscan_progress, completed=True, visible=False)
     # 输出内容
     if (output_url):
